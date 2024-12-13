@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <script type="module" src="./film.js"></script>
+        <script type="module" src="./service.js"></script>
+        <script type="module" src="./index.js"></script>
+    </head>
+
+    <body>
+        <h1>Film Tracker</h1>
+        <br>
+        <h3>Services</h3>
+        <ul id="services"></ul>
+
+        <form id="add-service-form">
+            <label for="name">Name</label>
+            <input id="service-name-text" type="text" name="name" required>
+            <label for="price">Price</label>
+            <input id="service-price-text" type="number" name="price" step="0.01" required>
+            <input id="add-service" type="submit" value="Add service">
+        </form>
+
+        <p id="service-error" style="color: red;"></p>
+
+        <h3>Films</h3>
+        <table id="films" style="width: 100%; text-align: center;">
+            <thead>
+                <td>Name</td>
+                <td>Year</td>
+                <td>Genre</td>
+                <td>Runtime</td>
+                <td>Rating</td>
+                <td>Service</td>
+            </thead>
+            <tbody id="films-body"></tbody>
+        </table>
+        <br>
+
+        <form id="add-film-form">
+            <label for="name">Name</label>
+            <input id="film-name-text" type="text" name="name" required>
+
+            <label for="">Year</label>
+            <input id="film-year-text" type="number" name="" required>
+            
+            <label for="">Genre</label>
+            <select id="film-genre-dropdown" name="Genre" required>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="horror">Horror</option>
+                <option value="romance">Romance</option>
+            </select>
+
+            <label for="">Runtime</label>
+            <input id="film-runtime-text" type="number" name="" required>
+
+            <label for="">Rating</label>
+            <select id="film-rating-dropdown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="">Service</label>
+            <select id="film-service-dropdown" name="" required></select>
+            <input id="add-film-button" type="submit" value="Add">
+        </form>
+        <p id="film-error" style="color: red;"></p>
+        <br>
+
+        <h3>Shows</h3>
+        <p>Season numbers must be separated by commas, e.g. 1, 2, 4</p>
+        <table id="shows" style="width: 100%; text-align: center;">
+            <thead>
+                <td>Name</td>
+                <td>Genre</td>
+                <td>Rating</td>
+                <td>Service</td>
+            </thead>
+            <tbody id="shows-body"></tbody>
+        </table>
+        <br>
+
+        <form id="add-show-form" style="width: 100%;">
+            <label for="name">Name</label>
+            <input id="show-name-text" type="text" name="name" required>
+
+            <label for="">Genre</label>
+            <select id="show-genre-dropdown" name="Genre" required>
+                <option value="action">Action</option>
+                <option value="comedy">Comedy</option>
+                <option value="horror">Horror</option>
+                <option value="romance">Romance</option>
+            </select>
+
+            <label for="">Rating</label>
+            <select id="show-rating-dropdown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="">Service</label>
+            <select id="show-service-dropdown" name="" required></select>
+            <input id="add-show-button" type="submit" value="Add">
+            <br>
+
+            <table id="add-season-form">
+                <thead>
+                    <td>Season number</td>
+                    <td>Year of release</td>
+                    <td>Number of episodes</td>
+                </thead>
+                <tbody>
+                    <td><input type="number" id="season-number" required></td>
+                    <td><input type="number" name="" id="season-year" required></td>
+                    <td><input type="number" name="" id="season-episodes" required></td>
+                    <td><input id="delete-season" type="button" value="Delete"></td>
+                </tbody>
+                <td><input type="button" value="Add season"></td>
+            </table>
+        </form>
+        <p id="show-error" style="color: red;"></p>
+
+    </body>
+</html> 
